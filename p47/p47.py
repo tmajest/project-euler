@@ -10,6 +10,6 @@ for i in xrange(3, 1000000):
 
     # Check that each number has only 4 prime factors and that they share
     # no factors in common (set intersection of their factors is empty)
-    if 4 == len(a) == len(b) == len(c) == len(d) and len(a & b & c) == 0:
+    if 4 == len(a) == len(b) == len(c) == len(d) and len(a & b & c & d) == 0:
         print i
         break
