@@ -61,9 +61,9 @@ def num_prime_digit_replacements(num, primes):
     of digits in the prime with the same digit
     """
     positions = range(len(str(num)))
-
-    # Try replacing all combinations of positions
     max_prime_count = 0
+
+    # Only generate valid replacement positions for the prime
     for replace_positions in get_replacement_positions(num):
         prime_replacements = get_prime_replacements(num, replace_positions, primes)
         max_prime_count = max(max_prime_count, len(prime_replacements))
