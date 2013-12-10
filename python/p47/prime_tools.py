@@ -19,16 +19,16 @@ def primes_up_to(num):
 def prime_factors(num):
     """ 
     Kind of hacky implementation of prime factorization.
-    Returns a set of tuples (a, b) represeting the factor a to the bth power
     """
-    factors = collections.defaultdict(int)
+    factors = set()
     curr_factor = 2
 
     while num > 1:
         if num % curr_factor == 0:
-            factors[curr_factor] += 1
+            factors.add(curr_factor)
             num /= curr_factor
         else:
             curr_factor += 1 if curr_factor == 2 else 2
+            
+    return factors
 
-    return set(factors.iteritems())
