@@ -1,5 +1,7 @@
 # http://projecteuler.net/problem=61
 
+import itertools
+
 def solve(curr_sequence, all_num_lists, used):
     if len(used) == 6 and curr_sequence[-1][-2:] == curr_sequence[0][:2]:
         return sum(map(int, curr_sequence))
