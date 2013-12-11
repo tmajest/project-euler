@@ -21,6 +21,13 @@ class Card(object):
         return self.value < other.value
 
 def sort_cards_by_count(card_counter):
+    """ 
+    Given a dictionary of card counts, return a list of card values
+    sorted first by their frequency, then by their value.  (in reverse order)
+
+    E.g. card_counter = { 5: 2, 6:2, 9: 1 }
+          => [6, 5, 9]
+    """
     comparer = lambda card: (card_counter.get(card), card)
     return sorted(card_counter, key=comparer, reverse=True)
 
