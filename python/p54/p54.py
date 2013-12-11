@@ -48,6 +48,7 @@ def score_straight(cards):
     if range(cards[0], cards[-1] - 1, -1) == cards:
         return (5, cards)
     elif 12 in cards:
+        # Try to use ace as lowest card
         if cards == [12, 3, 2, 1, 0]:
             return (5, cards[1:] + [cards[0]])
 
