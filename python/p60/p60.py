@@ -30,9 +30,9 @@ def accept(num, tempSolution, primes):
          # 7109 is prime
          => True
 
-         accept(8, [3, 109], primes)
-         # 83 is prime
-         # 38 is not prime
+         accept(5, [3, 109], primes)
+         # 53 is prime
+         # 35 is not prime
          => False
     """
     for prime in tempSolution:
