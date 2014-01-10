@@ -8,11 +8,11 @@
 # By considering the terms in the Fibonacci sequence whose values do not 
 # exceed four million, find the sum of the even-valued terms.
 
-def fib(n):
+def fib(upto):
     """ Generate the fibonacci numbers less than n """
     a, b = 1, 2
-    while a < n:
+    while a < upto:
         yield a
         a, b = b, a + b
 
-print sum(f for f in fib(4000000) if f % 2 == 0)
+print sum(f for f in fib(upto=4000000) if f % 2 == 0)
