@@ -13,8 +13,3 @@ while (prime < num):
         prime += 1
 
 print prime
-    
-
-
-
-
