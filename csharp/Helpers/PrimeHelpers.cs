@@ -29,26 +29,6 @@ namespace ProjectEuler.Helpers
                 .ToArray();
         }
 
-        public static IEnumerable<long> AllPrimes(int initialLength = 100000)
-        {
-            var sieve = PrimeSieve(initialLength);
-            var start = 2L;
-
-            while (true)
-            {
-                for (var i = start; i < sieve.Length; i++)
-                {
-                    if (sieve[i])
-                    {
-                        yield return i;
-                    }
-                }
-
-                start = sieve.Length;
-                sieve = PrimeSieve(sieve.Length * 2);
-            }
-        }
-
         /// <summary>
         /// Returns the prime factors of a given number.
         /// </summary>
@@ -62,6 +42,44 @@ namespace ProjectEuler.Helpers
             // Return primes that divide the number
             return PrimesLessThan(max)
                 .Where(prime => num % prime == 0)
+                .ToArray();
+        }
+
+        /// <summary>
+        /// Returns all divisors (prime and composite) for a number.
+        /// </summary>
+        public static long[] Divisors(long num)
+        {
+            if (num < 0)
+            {
+                return new long[0];
+            }
+
+            var divisors = new List<long>();
+            var divisor = 1;
+            var complement = num;
+
+            // Calculate divisors and their complements
+            while (divisor <= complement)
+            {
+                if (num % divisor == 0)
+                {
+                    divisors.Add(divisor);    
+
+                    // Don't add a divisor twice if the divisor is equal to its complement
+                    if (divisor != complement)
+                    {
+                        divisors.Add(complement);
+                    }
+                }
+
+                divisor++;
+                complement = num / divisor;
+            }
+
+            // Sort the divisors and return as an array
+            return divisors
+                .OrderBy(x => x)
                 .ToArray();
         }
 

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +48,9 @@
     <Compile Include="Helpers\FibonacciHelper.cs" />
     <Compile Include="Helpers\MathHelpers.cs" />
     <Compile Include="Helpers\PrimeHelpers.cs" />
+    <Compile Include="P11_to_20\P13.cs" />
+    <Compile Include="P11_to_20\P12.cs" />
+    <Compile Include="P11_to_20\P11.cs" />
     <Compile Include="P1_to_10\P1.cs" />
     <Compile Include="P1_to_10\P2.cs" />
     <Compile Include="P1_to_10\P3.cs" />

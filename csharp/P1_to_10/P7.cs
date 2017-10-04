@@ -13,12 +13,14 @@ namespace ProjectEuler.P1_to_10
     /// </summary>
     internal class P7
     {
+        private const int Max = 1000000;
+
         /// <summary>
         /// Calculate the 10,001st prime number
         /// </summary>
         public long Solve()
         {
-            return PrimeHelpers.AllPrimes()
+            return PrimeHelpers.PrimesLessThan(Max)
                 .Skip(10000)
                 .Take(1)
                 .Single();
