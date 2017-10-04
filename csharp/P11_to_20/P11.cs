@@ -40,7 +40,7 @@ namespace ProjectEuler.P11_to_20
         };
 
         /// <summary>
-        /// Return sum of numbers under 1000 that are divisible by 3 or 5.
+        /// Calculates the greatest product of 4 adjacent numbers in a line in any direction.
         /// </summary>
         public int Solve()
         {
