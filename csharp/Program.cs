@@ -13,7 +13,7 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new P13().Solve());
+            Console.WriteLine(new P17().Solve());
             Console.ReadLine();
         }
     }

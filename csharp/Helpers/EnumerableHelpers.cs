@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,16 @@ namespace ProjectEuler.Helpers
                 yield return start;
                 start += skip;
             }    
+        }
+
+        /// <summary>
+        /// Extension method to calculate the product of an IEnumerable of big integers.
+        /// </summary>
+        /// <param name="numbers">The numbers to calculate the product of</param>
+        /// <returns>The product of those numbers</returns>
+        public static BigInteger Product(this IEnumerable<BigInteger> numbers)
+        {
+            return numbers.Aggregate(new BigInteger(1), (product, curr) => product * curr);
         }
 
         /// <summary>
