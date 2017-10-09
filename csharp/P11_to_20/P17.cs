@@ -53,12 +53,6 @@ namespace ProjectEuler.P11_to_20
         {
             var result = new StringBuilder();
 
-            // Calculate the 100s section of the number, followed by the 10s section of the number, followed by
-            // the ones section of the number.
-            //
-            // E.g. 142: one hundred -> forty -> two
-            // E.g. 319: one hundred -> nineteen
-
             while (number > 0)
             {
                 if (number > 100)
