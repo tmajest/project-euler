@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ProjectEuler.Helpers;
 using ProjectEuler.P11_to_20;
 using ProjectEuler.P1_to_10;
+using ProjectEuler.P21_to_30;
 
 namespace ProjectEuler
 {
@@ -13,7 +14,7 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new P17().Solve());
+            Console.WriteLine(new P23().Solve());
             Console.ReadLine();
         }
     }

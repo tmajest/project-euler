@@ -4,7 +4,6 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using ProjectEuler.Helpers;
 
 namespace ProjectEuler.P11_to_20
 {
@@ -59,8 +58,11 @@ namespace ProjectEuler.P11_to_20
         /// </summary>
         public string Solve()
         {
+            // Convert number strings to BigIntegers and calculate their sum
             var bigInts = NumberGrid.Select(BigInteger.Parse);
             var sum = bigInts.Aggregate((total, next) => total + next);
+
+            // Return the first 10 digits of their sum
             return string.Join("", sum.ToString().Take(10));
         }
     }

@@ -48,6 +48,16 @@ namespace ProjectEuler.Helpers
         /// <summary>
         /// Returns all divisors (prime and composite) for a number.
         /// </summary>
+        public static int[] Divisors(int num)
+        {
+            return Divisors((long) num)
+                .Select(x => (int) x)
+                .ToArray();
+        }
+
+        /// <summary>
+        /// Returns all divisors (prime and composite) for a number.
+        /// </summary>
         public static long[] Divisors(long num)
         {
             if (num < 0)

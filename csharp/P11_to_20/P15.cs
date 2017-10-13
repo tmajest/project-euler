@@ -4,8 +4,6 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using MoreLinq;
-using ProjectEuler.Helpers;
 
 namespace ProjectEuler.P11_to_20
 {
